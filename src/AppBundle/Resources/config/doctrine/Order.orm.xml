@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                                             http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <entity name="AppBundle\Entity\Order" table="app_order">
+        <id name="id" column="id" type="integer">
+            <generator strategy="AUTO" />
+        </id>
+        <one-to-many field="items" target-entity="Sylius\Component\Order\Model\OrderItemInterface" mapped-by="order" orphan-removal="true">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
+
+        <one-to-many field="adjustments" target-entity="Sylius\Component\Order\Model\AdjustmentInterface" mapped-by="order" orphan-removal="true">
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-many>
+    </entity>
+
+</doctrine-mapping>
