@@ -1,4 +1,5 @@
-orderly
-=======
+Orda!
+=====
 
-A Symfony project created on March 11, 2016, 9:33 am.
+A project demonstrating the use of the Sylius OrderBundle
+in a sample Symfony application.

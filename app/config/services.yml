@@ -1,9 +1,12 @@
 # Learn more about services, parameters and containers at
 # http://symfony.com/doc/current/book/service_container.html
 parameters:
-#    parameter_name: value
+  sylius.model.sequence.class: Sylius\Component\Sequence\Model\Sequence
 
 services:
-#    service_name:
-#        class: AppBundle\Directory\ClassName
-#        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  app.order_number_listener:
+    class: Sylius\Bundle\OrderBundle\EventListener\OrderNumberListener
+    arguments:
+      - "@sylius.sequence.doctrine_number_listener"
+    tags:
+      - { name: kernel.event_listener, event: app.download_ordered, method: generateOrderNumber }

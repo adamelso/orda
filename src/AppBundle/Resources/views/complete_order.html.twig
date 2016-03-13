@@ -1,0 +1,7 @@
+{% extends 'default/index.html.twig' %}
+
+{% block content %}
+  <h4>Thank you.</h4>
+  <p>Your order number {{ order.number }} is ready to <a href="{{ path('download', { 'id': order.download.id }) }}">download.</a></p>
+  <p><a href="{{ path('homepage') }}">Click here to return home.</a></p>
+{% endblock content %}

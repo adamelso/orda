@@ -1,0 +1,51 @@
+body {
+  background: #933;
+}
+
+.coast {
+  background-color: #ddeaeb;
+  border-radius: 10px;
+  margin: 10px 0 0 0;
+  box-shadow: 2px 2px 10px #1d2b32;
+  min-height: 500px;
+}
+
+.north {
+  border-radius: 10px 10px 0 0;
+  padding: 0;
+}
+
+.hero {
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  width: 100%;
+  padding: 2em 0;
+  overflow: hidden;
+}
+.hero-background {
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 200%;
+
+  filter: blur(100px);
+  -webkit-filter: blur(100px);
+  transform: translate3d(100, 0, 0);
+  -webkit-transform: translate3d(100, 0, 0);
+}
+.hero-title {
+  position: relative;
+  text-align: center;
+  font-size: 3em;
+  color: white;
+}
+
+.south {
+  border-radius: 0 0 10px 10px;
+  padding: 5px;
+}
+
+h1 {
+  text-align: center;
+}

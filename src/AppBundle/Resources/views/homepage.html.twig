@@ -1,0 +1,16 @@
+{% extends 'default/index.html.twig' %}
+
+{% block content %}
+  <h4>Downloads available</h4>
+
+  <table class="hover">
+    <tbody>
+    {% for download in downloads %}
+      <tr>
+        <td>{{ download.name }}</td>
+        <td><a class="alert button" href="{{ path('begin_order_for_download', { 'id': download.id }) }}">GET</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock content %}

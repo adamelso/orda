@@ -6,9 +6,8 @@
                                              http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
     <entity name="AppBundle\Entity\Order" table="app_order">
-        <id name="id" column="id" type="integer">
-            <generator strategy="AUTO" />
-        </id>
+        <field name="email" column="email" type="string" nullable="true" />
+
         <one-to-many field="items" target-entity="Sylius\Component\Order\Model\OrderItemInterface" mapped-by="order" orphan-removal="true">
             <cascade>
                 <cascade-all/>

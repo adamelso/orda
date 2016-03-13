@@ -1,5 +1,5 @@
 {
-    "name": "adam/orderly",
+    "name": "adam/orda",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -8,8 +8,10 @@
         }
     },
     "require": {
-        "php": ">=5.3.9",
+        "php": ">=5.5",
+
         "symfony/symfony": "2.7.*",
+
         "doctrine/orm": "^2.4.8",
         "doctrine/doctrine-bundle": "~1.4",
         "symfony/assetic-bundle": "~2.3",
@@ -18,6 +20,9 @@
         "sensio/distribution-bundle": "~4.0",
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
+
+        "doctrine/doctrine-fixtures-bundle": "2.3",
+
         "sylius/order-bundle": "^0.17"
     },
     "require-dev": {

@@ -78,24 +78,32 @@ swiftmailer:
     password:  "%mailer_password%"
     spool:     { type: memory }
 
+sylius_sequence:
+    generators:
+        AppBundle\Entity\Order: sylius.sequence.sequential_number_generator
+
 sylius_order:
     resources:
         order:
             classes:
                 model: AppBundle\Entity\Order
+        order_item:
+            classes:
+                model: AppBundle\Entity\OrderItem
 
 ##########################################
 #
 #   @todo Verify we need this section
 #
 ##########################################
+#        order:
+#            classes:
 #                controller: Sylius\Bundle\OrderBundle\Controller\OrderController ?
 #                repository: Sylius\Bundle\OrderBundle\Doctrine\ORM\OrderRepository ?
 #                form:
 #                    default: Sylius\Bundle\OrderBundle\Form\Type\OrderType ?
 #        order_item:
 #            classes:
-#                model: Sylius\Component\Core\Model\OrderItem
 #                form:
 #                    default: Sylius\Bundle\CoreBundle\Form\Type\OrderItemType
 #        order_item_unit:
